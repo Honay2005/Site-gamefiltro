@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<style>
+    body {
+        background-color: rgb(155, 161, 184);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    section {
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(50, 70, 130);
+        border-radius: 5px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    button {
+        background-color: rgb(80, 100, 180);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: rgb(100, 120, 200);
+    }
+    .champ-list {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: rgb(30, 50, 100);
+        border-radius: 5px;
+    }
+    .champ-list ul {
+        list-style: none;
+        padding: 0;
+    }
+    .champ-list ul li {
+        margin: 5px 0;
+    }
+    .champ-info {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: rgb(40, 60, 120);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .champ-info img {
+        max-width: 300px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .image-gallery {
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(50, 70, 130);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .image-gallery img {
+        max-width: 150px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    .image-gallery img:hover {
+        transform: scale(1.1);
+    }
+    .selected-image {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: rgb(40, 60, 120);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .selected-image img {
+        max-width: 400px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .highlight {
+        border: 3px solid yellow;
+        border-radius: 10px;
+    }
+    .clickable {
+        cursor: pointer;
+    }
+</style>
+<head>
+    <title>CHAMPS DO LOL</title>
+</head>
+<body>
+    <header>
+        <h1>CHAMPS DO LOL</h1>
+        <nav>
+            <ul>
+                <li><a href="#REGIÃO">#REGIÃO</a></li>
+                <li><a href="#LANE">#LANE</a></li>
+                <li><a href="#CLASSE">#CLASSE</a></li>
+                <li><a href="#IMAGENS">#IMAGENS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="REGIÃO">
+        <h2>Buscar por Região</h2>
+        <form>
+            <label for="regiao">Selecione a Região:</label>
+            <select id="regiao" name="regiao">
+                <option value="demacia">Demacia</option>
+                <option value="noxus">Noxus</option>
+                <option value="ionia">Ionia</option>
+                <option value="freljord">Freljord</option>
+                <option value="piltover">Piltover</option>
+                <option value="shurima">Shurima</option>
+                <option value="targon">Targon</option>
+                <option value="zaun">Zaun</option>
+                <option value="bilgewater">Bilgewater</option>
+                <option value="Ixtal">Ixtal</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="champ-list" id="regiao-champs">
+            <h3>Campeões:</h3>
+            <ul>
+                <li data-regiao="demacia" data-name="Garen" data-img="https://th.bing.com/th/id/OIP.zlywsu_kmKXJlx3EjQuvbgHaEK?rs=1&pid=ImgDetMain" data-info="Garen é um lutador resistente com habilidades de regeneração.">Garen (Demacia)</li>
+                <li data-regiao="demacia" data-name="Lux" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1e/Skin_Splash_Classic_Lux.jpg/revision/latest/scale-to-width-down/1024?cb=20191210052803" data-info="Lux é uma maga com habilidades de controle e dano em área.">Lux (Demacia)</li>
+                <li data-regiao="noxus" data-name="Darius" data-img="https://th.bing.com/th/id/OIP.gr2FGeXgYh5eTy6fQmUyAwHaEK?rs=1&pid=ImgDetMain" data-info="Darius é um lutador que causa dano massivo com seu machado.">Darius (Noxus)</li>
+                <li data-regiao="ionia" data-name="Ahri" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c0/Skin_Splash_Classic_Ahri.jpg/revision/latest/scale-to-width-down/1024?cb=20241024154731" data-info="Ahri é uma maga ágil com habilidades de controle e dano.">Ahri (Ionia)</li>
+                <li data-regiao="freljord" data-name="Ashe" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1a/Skin_Splash_Classic_Ashe.jpg/revision/latest/scale-to-width-down/1200?cb=20191210032951" data-info="Ashe é uma atiradora com habilidades de controle de grupo.">Ashe (Freljord)</li>
+                <li data-regiao="piltover" data-name="Caitlyn" data-img="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUNZ_3CPUqhLhfl36CLW7YQrIiSyEY2zsSCQRTVKgJdnLSolsMupIrTgCYZV5_q6ELObzDMVsETcoGYAVZPsgZC2w1OMp9LUgAc224sFhubE5QrlwoQkEQUC2s3gURBKK3wYamTEO3PwOe/w919/caitlyn-lol-splash-art-uhdpaper.com-4K-662-wp.thumbnail.jpg" data-info="Caitlyn é uma atiradora com grande alcance e armadilhas estratégicas.">Caitlyn (Piltover)</li>
+                <li data-regiao="shurima" data-name="Nasus" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4c/Skin_Splash_Classic_Nasus.jpg/revision/latest/scale-to-width-down/350?cb=20191210074840" data-info="Nasus é um lutador com habilidades de drenagem e escalabilidade.">Nasus (Shurima)</li>
+                <li data-regiao="targon" data-name="Leona" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/Skin_Splash_Classic_Leona.jpg/revision/latest/scale-to-width-down/1024?cb=20191210064615" data-info="Leona é uma tanque com habilidades de controle e proteção.">Leona (Targon)</li>
+                <li data-regiao="zaun" data-name="Jinx" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/Skin_Splash_Classic_Jinx.jpg/revision/latest?cb=20191210044208" data-info="Jinx é uma atiradora com habilidades explosivas e dano em área.">Jinx (Zaun)</li>
+                <li data-regiao="bilgewater" data-name="Miss Fortune" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/63/Skin_Splash_Classic_Miss_Fortune.jpg/revision/latest/scale-to-width-down/1024?cb=20191210020207" data-info="Miss Fortune é uma atiradora com habilidades de dano em área.">Miss Fortune (Bilgewater)</li>
+                <li data-regiao="freljord" data-name="Braum" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bf/Skin_Splash_Classic_Braum.jpg/revision/latest/scale-to-width-down/1024?cb=20191209211838" data-info="Braum é um suporte com habilidades de proteção e controle.">Braum (Freljord)</li>
+                <li data-regiao="ionia" data-name="Lee Sin" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e2/Skin_Splash_Classic_Lee_Sin.jpg/revision/latest?cb=20191209035004" data-info="Lee Sin é um lutador ágil com habilidades de mobilidade e dano.">Lee Sin (Ionia)</li>
+                <li data-regiao="ionia" data-name="Yasuo" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/12/Skin_Splash_Classic_Yasuo.jpg/revision/latest/scale-to-width-down/350?cb=20191209231330" data-info="Yasuo é um lutador ágil com habilidades de bloqueio e dano crítico.">Yasuo (Ionia)</li>
+                <li data-regiao="ionia" data-name="Zed" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d3/Skin_Splash_Classic_Zed.jpg/revision/latest/scale-to-width-down/350?cb=20191212175001" data-info="Zed é um assassino com habilidades de sombras e dano explosivo.">Zed (Ionia)</li>
+                <li data-regiao="shurima" data-name="Renekton" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6c/Skin_Splash_Classic_Renekton.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" data-info="Renekton é um lutador com habilidades de regeneração e dano em área.">Renekton (shurima)</li>
+                <li data-regiao="Ixtal" data-name="Malphite" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9d/Skin_Splash_Classic_Malphite.jpg/revision/latest/scale-to-width-down/1024?cb=20191212173704" data-info="Malphite é um tanque com habilidades de controle e resistência.">Malphite (Ixtal)</li>
+            </ul>
+        </div>
+    </section>
+    <section id="LANE">
+        <h2>Buscar por Lane</h2>
+        <form>
+            <label for="lane">Selecione a Lane:</label>
+            <select id="lane" name="lane">
+                <option value="top">Top</option>
+                <option value="jungle">Jungle</option>
+                <option value="mid">Mid</option>
+                <option value="adc">ADC</option>
+                <option value="support">Support</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="champ-list" id="lane-champs">
+            <h3>Campeões:</h3>
+            <ul>
+                <li data-lane="top" data-name="Shen" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/67/Skin_Splash_Classic_Shen.jpg/revision/latest?cb=20191210034151" data-info="Shen é um tanque com habilidades de proteção e teleporte.">Shen (Top)</li>
+                <li data-lane="top" data-name="Nasus" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4c/Skin_Splash_Classic_Nasus.jpg/revision/latest/scale-to-width-down/350?cb=20191210074840" data-info="Nasus é um lutador com habilidades de drenagem e escalabilidade.">Nasus (Top)</li>
+                <li data-lane="jungle" data-name="Lee Sin" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e2/Skin_Splash_Classic_Lee_Sin.jpg/revision/latest?cb=20191209035004" data-info="Lee Sin é um lutador ágil com habilidades de mobilidade e dano.">Lee Sin (Jungle)</li>
+                <li data-lane="mid" data-name="Yasuo" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/12/Skin_Splash_Classic_Yasuo.jpg/revision/latest/scale-to-width-down/350?cb=20191209231330" data-info="Yasuo é um lutador ágil com habilidades de bloqueio e dano crítico.">Yasuo (Mid)</li>
+                <li data-lane="adc" data-name="Jinx" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/Skin_Splash_Classic_Jinx.jpg/revision/latest?cb=20191210044208" data-info="Jinx é uma atiradora com habilidades explosivas e dano em área.">Jinx (ADC)</li>
+                <li data-lane="support" data-name="Thresh" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Skin_Splash_Classic_Thresh.jpg/revision/latest/scale-to-width-down/1200?cb=20191209225101" data-info="Thresh é um suporte com habilidades de controle e proteção.">Thresh (Support)</li>
+                <li data-lane="support" data-name="Leona" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/Skin_Splash_Classic_Leona.jpg/revision/latest/scale-to-width-down/1024?cb=20191210064615" data-info="Leona é uma tanque com habilidades de controle e proteção.">Leona (Support)</li>
+                <li data-lane="adc" data-name="Caitlyn" data-img="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUNZ_3CPUqhLhfl36CLW7YQrIiSyEY2zsSCQRTVKgJdnLSolsMupIrTgCYZV5_q6ELObzDMVsETcoGYAVZPsgZC2w1OMp9LUgAc224sFhubE5QrlwoQkEQUC2s3gURBKK3wYamTEO3PwOe/w919/caitlyn-lol-splash-art-uhdpaper.com-4K-662-wp.thumbnail.jpg" data-info="Caitlyn é uma atiradora com grande alcance e armadilhas estratégicas.">Caitlyn (ADC)</li>
+                <li data-lane="mid" data-name="Lux" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1e/Skin_Splash_Classic_Lux.jpg/revision/latest/scale-to-width-down/1024?cb=20191210052803" data-info="Lux é uma maga com habilidades de controle e dano em área.">Lux (Mid)</li>
+                <li data-lane="top" data-name="Renekton" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6c/Skin_Splash_Classic_Renekton.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" data-info="Renekton é um lutador com habilidades de regeneração e dano em área.">Renekton (Top)</li>
+                <li data-lane="jungle" data-name="Zed" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d3/Skin_Splash_Classic_Zed.jpg/revision/latest/scale-to-width-down/350?cb=20191212175001" data-info="Zed é um assassino com habilidades de sombras e dano explosivo.">Zed (Jungle)</li>
+                <li data-lane="mid" data-name="Ahri" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c0/Skin_Splash_Classic_Ahri.jpg/revision/latest/scale-to-width-down/1024?cb=20241024154731" data-info="Ahri é uma maga ágil com habilidades de controle e dano.">Ahri (Mid)</li>
+                <li data-lane="support" data-name="Braum" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bf/Skin_Splash_Classic_Braum.jpg/revision/latest/scale-to-width-down/1024?cb=20191209211838" data-info="Braum é um suporte com habilidades de proteção e controle.">Braum (Support)</li>
+                <li data-lane="jungle" data-name="Malphite" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9d/Skin_Splash_Classic_Malphite.jpg/revision/latest/scale-to-width-down/1024?cb=20191212173704" data-info="Malphite é um tanque com habilidades de controle e resistência.">Malphite (Jungle)</li>
+                <li data-lane="top" data-name="Darius" data-img="https://th.bing.com/th/id/OIP.gr2FGeXgYh5eTy6fQmUyAwHaEK?rs=1&pid=ImgDetMain" data-info="Darius é um lutador que causa dano massivo com seu machado.">Darius (Top)</li>
+                <li data-lane="mid" data-name="Zed" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6c/Skin_Splash_Classic_Zed.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" data-info="Zed é um assassino com habilidades de sombras e dano explosivo.">Zed (Mid)</li>
+                <li data-lane="adc" data-name="Miss Fortune" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/63/Skin_Splash_Classic_Miss_Fortune.jpg/revision/latest/scale-to-width-down/1024?cb=20191210020207" data-info="Miss Fortune é uma atiradora com habilidades de dano em área.">Miss Fortune (ADC)</li>
+                <li data-lane="support" data-name="Thresh" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Skin_Splash_Classic_Thresh.jpg/revision/latest/scale-to-width-down/1200?cb=20191209225101" data-info="Thresh é um suporte com habilidades de controle e proteção.">Thresh (Support)</li>
+            </ul>
+        </div>
+    </section>
+    <section id="CLASSE">
+        <h2>Buscar por Classe</h2>
+        <form>
+            <label for="classe">Selecione a Classe:</label>
+            <select id="classe" name="classe">
+                <option value="assassino">Assassino</option>
+                <option value="lutador">Lutador</option>
+                <option value="mago">Mago</option>
+                <option value="atirador">Atirador</option>
+                <option value="suporte">Suporte</option>
+                <option value="tanque">Tanque</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="champ-list" id="classe-champs">
+            <h3>Campeões:</h3>
+            <ul>
+                <li data-classe="lutador" data-name="Renekton" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6c/Skin_Splash_Classic_Renekton.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" data-info="Renekton é um lutador com habilidades de regeneração e dano em área.">Renekton (Lutador)</li>
+                <li data-classe="mago" data-name="Lux" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1e/Skin_Splash_Classic_Lux.jpg/revision/latest/scale-to-width-down/1024?cb=20191210052803" data-info="Lux é uma maga com habilidades de controle e dano em área.">Lux (Mago)</li>
+                <li data-classe="atirador" data-name="Miss Fortune" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/63/Skin_Splash_Classic_Miss_Fortune.jpg/revision/latest/scale-to-width-down/1024?cb=20191210020207" data-info="Miss Fortune é uma atiradora com habilidades de dano em área.">Miss Fortune (Atirador)</li>
+                <li data-classe="suporte" data-name="Braum" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bf/Skin_Splash_Classic_Braum.jpg/revision/latest/scale-to-width-down/1024?cb=20191209211838" data-info="Braum é um suporte com habilidades de proteção e controle.">Braum (Suporte)</li>
+                <li data-classe="tanque" data-name="Malphite" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9d/Skin_Splash_Classic_Malphite.jpg/revision/latest/scale-to-width-down/1024?cb=20191212173704" data-info="Malphite é um tanque com habilidades de controle e resistência.">Malphite (Tanque)</li>
+                <li data-classe="tanque" data-name="Leona" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6f/Skin_Splash_Classic_Leona.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" data-info="Leona é uma tanque com habilidades de controle e proteção.">Leona (Tanque)</li>
+                <li data-classe="atirador" data-name="Jinx" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/Skin_Splash_Classic_Jinx.jpg/revision/latest?cb=20191210044208" data-info="Jinx é uma atiradora com habilidades explosivas e dano em área.">Jinx (Atirador)</li>
+                <li data-classe="suporte" data-name="Thresh" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Skin_Splash_Classic_Thresh.jpg/revision/latest/scale-to-width-down/1200?cb=20191209225101" data-info="Thresh é um suporte com habilidades de controle e proteção.">Thresh (Suporte)</li>
+                <li data-classe="atirador" data-name="Caitlyn" data-img="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUNZ_3CPUqhLhfl36CLW7YQrIiSyEY2zsSCQRTVKgJdnLSolsMupIrTgCYZV5_q6ELObzDMVsETcoGYAVZPsgZC2w1OMp9LUgAc224sFhubE5QrlwoQkEQUC2s3gURBKK3wYamTEO3PwOe/w919/caitlyn-lol-splash-art-uhdpaper.com-4K-662-wp.thumbnail.jpg" data-info="Caitlyn é uma atiradora com grande alcance e armadilhas estratégicas.">Caitlyn (Atirador)</li>
+                <li data-classe="mago" data-name="Ahri" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c0/Skin_Splash_Classic_Ahri.jpg/revision/latest/scale-to-width-down/1024?cb=20241024154731" data-info="Ahri é uma maga ágil com habilidades de controle e dano.">Ahri (Mago)</li>
+                <li data-classe="lutador" data-name=" Garen" data-img="https://th.bing.com/th/id/OIP.zlywsu_kmKXJlx3EjQuvbgHaEK?rs=1&pid=ImgDetMain" data-info="Garen é um lutador resistente com habilidades de regeneração.">Garen (Lutador)</li>
+                <li data-classe="tanque" data-name="Shen" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/67/Skin_Splash_Classic_Shen.jpg/revision/latest?cb=20191210034151" data-info="Shen é um tanque com habilidades de proteção e teleporte.">Shen (Tanque)</li>
+                <li data-classe="lutador" data-name="Darius" data-img="https://th.bing.com/th/id/OIP.gr2FGeXgYh5eTy6fQmUyAwHaEK?rs=1&pid=ImgDetMain" data-info="Darius é um lutador que causa dano massivo com seu machado.">Darius (Lutador)</li>
+                <li data-classe="lutador" data-name="Lee Sin" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e2/Skin_Splash_Classic_Lee_Sin.jpg/revision/latest?cb=20191209035004" data-info="Lee Sin é um lutador ágil com habilidades de mobilidade e dano.">Lee Sin (Lutador)</li>
+                <li data-classe = "assassino" data-name="Zed" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d3/Skin_Splash_Classic_Zed.jpg/revision/latest/scale-to-width-down/350?cb=20191212175001" data-info="Zed é um assassino com habilidades de sombras e dano explosivo.">Zed (Assassino)</li> 
+                <li data-classe="lutador" data-name="Nasus" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4c/Skin_Splash_Classic_Nasus.jpg/revision/latest/scale-to-width-down/350?cb=20191210074840" data-info="Nasus é um lutador com habilidades de drenagem e escalabilidade.">Nasus (Lutador)</li>
+                <li data-classe="suporte" data-name="Leona" data-img="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/Skin_Splash_Classic_Leona.jpg/revision/latest/scale-to-width-down/1024?cb=20191210064615" data-info="Leona é uma tanque com habilidades de controle e proteção.">Leona (Suporte)</li>
+            </ul>
+        </div>
+    </section>
+    <section id="IMAGENS">
+        <h2>Galeria de Imagens</h2>
+        <div class="image-gallery">
+            <img src="https://th.bing.com/th/id/OIP.zlywsu_kmKXJlx3EjQuvbgHaEK?rs=1&pid=ImgDetMain" alt="Garen" data-name="Garen" data-info="Garen é um lutador resistente com habilidades de regeneração.">
+            <img src="https://th.bing.com/th/id/OIP.gr2FGeXgYh5eTy6fQmUyAwHaEK?rs=1&pid=ImgDetMain" alt="Darius" data-name="Darius" data-info="Darius é um lutador que causa dano massivo com seu machado.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c0/Skin_Splash_Classic_Ahri.jpg/revision/latest/scale-to-width-down/1024?cb=20241024154731" alt="Ahri" data-name="Ahri" data-info="Ahri é uma maga ágil com habilidades de controle e dano.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1a/Skin_Splash_Classic_Ashe.jpg/revision/latest/scale-to-width-down/1200?cb=20191210032951" alt="Ashe" data-name="Ashe" data-info="Ashe é uma atiradora com habilidades de controle de grupo.">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUNZ_3CPUqhLhfl36CLW7YQrIiSyEY2zsSCQRTVKgJdnLSolsMupIrTgCYZV5_q6ELObzDMVsETcoGYAVZPsgZC2w1OMp9LUgAc224sFhubE5QrlwoQkEQUC2s3gURBKK3wYamTEO3PwOe/w919/caitlyn-lol-splash-art-uhdpaper.com-4K-662-wp.thumbnail.jpg" alt="Caitlyn" data-name="Caitlyn" data-info="Caitlyn é uma atiradora com grande alcance e armadilhas estratégicas.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/67/Skin_Splash_Classic_Shen.jpg/revision/latest?cb=20191210034151" alt="Shen" data-name="Shen" data-info="Shen é um tanque com habilidades de proteção e teleporte.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e2/Skin_Splash_Classic_Lee_Sin.jpg/revision/latest?cb=20191209035004" alt="Lee Sin" data-name="Lee Sin" data-info="Lee Sin é um lutador ágil com habilidades de mobilidade e dano.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/12/Skin_Splash_Classic_Yasuo.jpg/revision/latest/scale-to-width-down/350?cb=20191209231330" alt="Yasuo" data-name="Yasuo" data-info="Yasuo é um lutador ágil com habilidades de bloqueio e dano crítico.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a5/Skin_Splash_Classic_Jinx.jpg/revision/latest?cb=20191210044208" alt="Jinx" data-name="Jinx" data-info="Jinx é uma atiradora com habilidades explosivas e dano em área.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f3/Skin_Splash_Classic_Thresh.jpg/revision/latest/scale-to-width-down/1200?cb=20191209225101" alt="Thresh" data-name="Thresh" data-info="Thresh é um suporte com habilidades de controle e proteção.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6c/Skin_Splash_Classic_Renekton.jpg/revision/latest/scale-to-width-down/1024?cb=20191210072605" alt="Renekton" data-name="Renekton" data-info="Renekton é um lutador com habilidades de regeneração e dano em área.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/1e/Skin_Splash_Classic_Lux.jpg/revision/latest/scale-to-width-down/1024?cb=20191210052803" alt="Lux" data-name="Lux" data-info="Lux é uma maga com habilidades de controle e dano em área.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/63/Skin_Splash_Classic_Miss_Fortune.jpg/revision/latest/scale-to-width-down/1024?cb=20191210020207" alt="Miss Fortune" data-name="Miss Fortune" data-info="Miss Fortune é uma atiradora com habilidades de dano em área.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/bf/Skin_Splash_Classic_Braum.jpg/revision/latest/scale-to-width-down/1024?cb=20191209211838" alt="Braum" data-name="Braum" data-info="Braum é um suporte com habilidades de proteção e controle.">
+            <img src = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/Skin_Splash_Classic_Leona.jpg/revision/latest/scale-to-width-down/350?cb=20191210064615" alt="Leona" data-name="Leona" data-info="Leona é uma tanque com habilidades de controle e proteção.">
+            <img src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9d/Skin_Splash_Classic_Malphite.jpg/revision/latest/scale-to-width-down/1024?cb=20191212173704" alt="Malphite" data-name="Malphite" data-info="Malphite é um tanque com habilidades de controle e resistência.">
+            <img src = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4c/Skin_Splash_Classic_Nasus.jpg/revision/latest/scale-to-width-down/350?cb=20191210074840" alt="Nasus" data-name="Nasus" data-info="Nasus é um lutador com habilidades de drenagem e escalabilidade.">
+            <img src = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d3/Skin_Splash_Classic_Zed.jpg/revision/latest/scale-to-width-down/350?cb=20191212175001" alt="Zed" data-name="Zed" data-info="Zed é um assassino com habilidades de sombras e dano explosivo.">
+        </div>
+        <div class="selected-image" id="selected-image" style="display: none;">
+            <img id="selected-img" src="" alt="Splash Art">
+            <h3 id="selected-name"></h3>
+            <p id="selected-info"></p>
+        </div>
+    </section>
+    <div class="champ-info" id="champ-info" style="display: none;">
+        <img id="champ-img" src="" alt="Splash Art">
+        <h3 id="champ-name"></h3>
+        <p id="champ-description"></p>
+    </div>
+    <script>
+        // Atualizar imagem ao usar o filtro
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const filterType = this.querySelector('select').name;
+                const filterValue = this.querySelector('select').value;
+                const champList = this.nextElementSibling.querySelectorAll('li');
+
+                // Mostrar apenas os campeões filtrados
+                champList.forEach(champ => {
+                    champ.style.display = champ.dataset[filterType] === filterValue ? 'list-item' : 'none';
+                });
+            });
+        });
+
+        // Tornar itens interativos clicáveis
+        document.querySelectorAll('.image-gallery img, .champ-list ul li').forEach(item => {
+            item.classList.add('clickable');
+        });
+
+        // Atualizar imagem ao clicar no item filtrado
+        document.querySelectorAll('.champ-list ul li').forEach(champ => {
+            champ.addEventListener('click', function () {
+                const selectedImage = document.getElementById('selected-image');
+                const selectedImg = document.getElementById('selected-img');
+                const selectedName = document.getElementById('selected-name');
+                const selectedInfo = document.getElementById('selected-info');
+
+                selectedImg.src = this.dataset.img;
+                selectedName.textContent = this.dataset.name;
+                selectedInfo.textContent = this.dataset.info;
+
+                selectedImage.style.display = 'block';
+
+                // Sincronizar com a galeria
+                const galleryImages = document.querySelectorAll('.image-gallery img');
+                galleryImages.forEach(img => {
+                    if (img.dataset.name === this.dataset.name) {
+                        img.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        img.classList.add('highlight');
+                    } else {
+                        img.classList.remove('highlight');
+                    }
+                });
+            });
+        });
+
+        // Atualizar imagem ao clicar diretamente
+        document.querySelectorAll('.image-gallery img').forEach(image => {
+            image.addEventListener('click', function () {
+                const selectedImage = document.getElementById('selected-image');
+                const selectedImg = document.getElementById('selected-img');
+                const selectedName = document.getElementById('selected-name');
+                const selectedInfo = document.getElementById('selected-info');
+
+                selectedImg.src = this.src;
+                selectedName.textContent = this.dataset.name;
+                selectedInfo.textContent = this.dataset.info;
+
+                selectedImage.style.display = 'block';
+
+                // Remover destaque de outros itens
+                document.querySelectorAll('.image-gallery img').forEach(img => {
+                    img.classList.remove('highlight');
+                });
+
+                // Destacar a imagem selecionada
+                this.classList.add('highlight');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
